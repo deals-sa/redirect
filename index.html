@@ -3,212 +3,594 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>I Bought This Kitchen Combo — Here's My Honest Review After 3 Months</title>
+    <meta name="description" content="Real customer review of the 3-piece kitchen appliance combo deal featuring Defy Microwave, Russell Hobbs Air Fryer and Mellerware Kettle.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            min-height: 100vh;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #f0f2f5;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+
+        .top-bar {
+            background: #1a8c37;
+            color: #fff;
+            text-align: center;
+            padding: 8px 16px;
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .header {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 20px 0;
+        }
+
+        .breadcrumb {
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 24px;
+        }
+
+        .breadcrumb a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1565c0;
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .article-title {
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
+            line-height: 1.25;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e0c8a8;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #0a0a1a;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            overflow: hidden;
+            font-weight: 700;
+            color: #6d5232;
+            font-size: 1rem;
         }
 
-        .bg-glow {
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.3;
-            animation: float 6s ease-in-out infinite;
+        .meta-text strong { color: #333; }
+
+        .hero-image {
+            max-width: 720px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
         }
 
-        .bg-glow--1 {
-            top: -200px;
-            left: -100px;
-            background: #6366f1;
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
         }
 
-        .bg-glow--2 {
-            bottom: -200px;
-            right: -100px;
-            background: #8b5cf6;
-            animation-delay: -3s;
-        }
-
-        .container {
-            text-align: center;
-            z-index: 1;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        .spinner-wrapper {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 32px;
-        }
-
-        .spinner-ring {
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            border: 3px solid transparent;
-        }
-
-        .spinner-ring--outer {
-            border-top-color: #818cf8;
-            border-right-color: #818cf8;
-            animation: spin 1.2s linear infinite;
-        }
-
-        .spinner-ring--middle {
-            inset: 10px;
-            border-bottom-color: #a78bfa;
-            border-left-color: #a78bfa;
-            animation: spin 1.8s linear infinite reverse;
-        }
-
-        .spinner-ring--inner {
-            inset: 20px;
-            border-top-color: #c4b5fd;
-            animation: spin 0.9s linear infinite;
-        }
-
-        .spinner-dot {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 12px;
-            height: 12px;
-            margin: -6px 0 0 -6px;
-            background: #818cf8;
-            border-radius: 50%;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        .title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-bottom: 8px;
-            letter-spacing: -0.02em;
-        }
-
-        .subtitle {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            margin-bottom: 32px;
-        }
-
-        .progress-track {
-            width: 280px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 4px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #818cf8, #a78bfa, #c084fc);
-            border-radius: 4px;
-            transition: width 0.1s linear;
-        }
-
-        .timer {
-            margin-top: 16px;
+        .hero-image figcaption {
+            font-family: -apple-system, system-ui, sans-serif;
             font-size: 0.8rem;
-            color: #64748b;
-            font-variant-numeric: tabular-nums;
+            color: #999;
+            text-align: center;
+            margin-top: 10px;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.3); opacity: 1; }
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            color: #2a2a2a;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(30px, -30px); }
+        .content h2 {
+            font-size: 1.4rem;
+            margin: 40px 0 16px;
+            color: #111;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .highlight-box {
+            background: #fff;
+            border-left: 4px solid #1a8c37;
+            padding: 20px 24px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
 
-        .fade-out {
-            animation: fadeOut 0.5s ease-in forwards;
+        .highlight-box p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: #333;
         }
 
-        @keyframes fadeOut {
-            to { opacity: 0; transform: scale(0.98) translateY(-10px); }
+        .product-list {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .product-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .product-list li:last-child { border-bottom: none; }
+
+        .check {
+            color: #1a8c37;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .testimonials {
+            margin: 48px 0;
+        }
+
+        .testimonial {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '\201C';
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            font-size: 3rem;
+            color: #e0e0e0;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 16px;
+            padding-left: 4px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: -apple-system, system-ui, sans-serif;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #222;
+        }
+
+        .testimonial-location {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .stars {
+            color: #f9a825;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 48px 0;
+            padding: 40px 24px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #dce0e5;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .cta-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #111;
+        }
+
+        .cta-subtitle {
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #1a8c37;
+            color: #fff;
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 16px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(26,140,55,0.3);
+        }
+
+        .cta-button:hover {
+            background: #15722d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(26,140,55,0.4);
+        }
+
+        .cta-note {
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 16px;
+        }
+
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 24px 0;
+            font-family: -apple-system, system-ui, sans-serif;
+        }
+
+        .rating-big {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .rating-detail {
+            text-align: left;
+        }
+
+        .rating-detail .stars { margin-bottom: 2px; }
+
+        .rating-detail span {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .footer {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px 100px;
+            border-top: 1px solid #eee;
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.8rem;
+            color: #aaa;
+            text-align: center;
+        }
+
+        .inline-cta {
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .inline-cta .cta-button {
+            font-size: 1rem;
+            padding: 14px 40px;
+        }
+
+        .inline-cta-hint {
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 8px;
+        }
+
+        .price-banner {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 28px 0;
+            text-align: center;
+            font-family: -apple-system, system-ui, sans-serif;
+        }
+
+        .price-banner .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1rem;
+        }
+
+        .price-banner .new-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #d84315;
+            margin: 4px 0;
+        }
+
+        .price-banner .save-text {
+            font-size: 0.85rem;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-top: 1px solid #e0e0e0;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            z-index: 100;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-bar.visible { transform: translateY(0); }
+
+        .sticky-bar .sticky-text {
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .sticky-bar .sticky-text .sticky-price {
+            color: #d84315;
+            font-weight: 800;
+        }
+
+        .sticky-bar .cta-button {
+            padding: 10px 28px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .urgency-strip {
+            background: #fff8e1;
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin: 16px 0 0;
+            font-family: -apple-system, system-ui, sans-serif;
+            font-size: 0.85rem;
+            color: #e65100;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .content p { font-size: 1rem; }
+            .testimonial { padding: 20px; }
+            .cta-button { padding: 14px 36px; font-size: 1rem; }
+            .sticky-bar { gap: 10px; padding: 10px 14px; }
+            .sticky-bar .sticky-text { font-size: 0.78rem; }
+            .sticky-bar .cta-button { padding: 10px 20px; font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
-    <div class="bg-glow bg-glow--1"></div>
-    <div class="bg-glow bg-glow--2"></div>
+    <div class="top-bar">Trusted Reviews &bull; Home &amp; Kitchen</div>
 
-    <div class="container" id="container">
-        <div class="spinner-wrapper">
-            <div class="spinner-ring spinner-ring--outer"></div>
-            <div class="spinner-ring spinner-ring--middle"></div>
-            <div class="spinner-ring spinner-ring--inner"></div>
-            <div class="spinner-dot"></div>
+    <header class="header">
+        <div class="breadcrumb">
+            <a href="#">Home</a> &rsaquo; <a href="#">Kitchen</a> &rsaquo; Appliance Combos
         </div>
-        <div class="title">Processing...</div>
-        <div class="subtitle">You will be redirected shortly</div>
-        <div class="progress-track">
-            <div class="progress-bar" id="progress"></div>
+        <span class="badge">&#10003; Verified Purchase &bull; Up to 65% Off</span>
+        <h1 class="article-title">I Bought This 3-Piece Kitchen Combo &mdash; Here's My Honest Review After 3 Months</h1>
+        <div class="article-meta">
+            <div class="author-avatar">TM</div>
+            <div class="meta-text">
+                <strong>Thandi M.</strong><br>
+                Updated 5 November 2026 &bull; 4 min read
+            </div>
         </div>
-        <div class="timer" id="timer">3s</div>
+    </header>
+
+    <figure class="hero-image">
+        <img src="product.png" alt="3-Piece Kitchen Combo: Defy Microwave, Russell Hobbs Air Fryer, Mellerware Glass Kettle" loading="eager">
+        <figcaption>The full combo: Defy Microwave, Russell Hobbs Air Fryer &amp; Mellerware Glass Kettle</figcaption>
+    </figure>
+
+    <article class="content">
+        <p>
+            Look, I wasn't planning on buying all three at once. I only needed a new kettle because my old one finally gave up after years of loyal service. But when I saw this combo deal, I couldn't believe the price for all three branded appliances together.
+        </p>
+        <p>
+            I've been using them every single day for the past three months now, and I feel like I can finally give a proper, honest review. No fluff &mdash; just what I actually think.
+        </p>
+
+        <h2>What You Get in the Box</h2>
+        <ul class="product-list">
+            <li><span class="check">&#10003;</span> <strong>Defy 34L Microwave</strong> &mdash; Mirror finish, digital display, multiple power levels</li>
+            <li><span class="check">&#10003;</span> <strong>Russell Hobbs Air Fryer</strong> &mdash; Digital touchscreen, large basket, rapid air technology</li>
+            <li><span class="check">&#10003;</span> <strong>Mellerware Glass Kettle</strong> &mdash; 1.8L capacity, blue LED light, boil-dry protection</li>
+        </ul>
+
+        <div class="price-banner">
+            <div class="old-price">Separately: R1,697</div>
+            <div class="new-price">Combo Price: R697</div>
+            <div class="save-text">You save R1,000 (59% off)</div>
+        </div>
+
+        <h2>The Air Fryer Changed Everything</h2>
+        <p>
+            I'll be honest &mdash; I was sceptical about air fryers. I thought it was just hype. But this Russell Hobbs one? It's become the most-used appliance in my kitchen. Chips come out perfectly crispy, chicken wings are amazing, and I've even made vetkoek in it. It uses so much less oil that I've actually noticed the difference in my monthly grocery bill.
+        </p>
+
+        <h2>The Microwave Is Solid</h2>
+        <p>
+            The Defy microwave is big &mdash; 34 litres means I can fit proper dishes inside. The mirror finish looks sleek on my counter, and it heats evenly. Nothing revolutionary, but it does exactly what a good microwave should do, and it does it well. Defy is a brand I trust.
+        </p>
+
+        <h2>The Kettle Is a Nice Bonus</h2>
+        <p>
+            The Mellerware glass kettle with the blue LED light is honestly just beautiful. My kids love watching the water boil. It heats up fast and the boil-dry protection gives me peace of mind. For what you pay in this combo, it feels like you're getting this one almost free.
+        </p>
+
+        <div class="inline-cta">
+            <a href="https://deals-sa.github.io/combo/" class="cta-button">Check If It's Still Available &rarr;</a>
+            <p class="inline-cta-hint">Over 2,400 combos sold this month</p>
+        </div>
+
+        <div class="highlight-box">
+            <p>
+                <strong>Bottom line:</strong> If you need even one of these appliances, the combo deal makes the other two practically free. The quality across all three has held up perfectly over 3 months of daily use. I'd buy it again without thinking twice.
+            </p>
+        </div>
+
+        <h2>What Other Buyers Are Saying</h2>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">
+                    Best purchase I've made this year. The air fryer alone is worth the combo price. My family loves the food I make in it now. Delivery was fast too &mdash; arrived in 3 days.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: #5c6bc0;">NP</div>
+                    <div>
+                        <div class="testimonial-name">Nompilo P.</div>
+                        <div class="testimonial-location">Johannesburg, GP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">
+                    I bought one for myself and then another as a gift for my sister's new flat. Everything works perfectly. The kettle with the blue light is gorgeous &mdash; looks way more expensive than it is.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: #26a69a;">LK</div>
+                    <div>
+                        <div class="testimonial-name">Lerato K.</div>
+                        <div class="testimonial-location">Pretoria, GP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <p class="testimonial-text">
+                    Very happy with the combo. Only reason for 4 stars instead of 5 is the microwave manual was a bit hard to follow, but the appliance itself is great. Definitely worth the price.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: #ef5350;">DV</div>
+                    <div>
+                        <div class="testimonial-name">David V.</div>
+                        <div class="testimonial-location">Cape Town, WC</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rating-summary">
+            <div class="rating-big">4.8</div>
+            <div class="rating-detail">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span>Based on 147 reviews</span>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Upgrade Your Kitchen?</h2>
+            <p class="cta-subtitle">Get all 3 branded appliances in one combo deal</p>
+            <div class="price-banner" style="border: none; background: transparent; padding: 8px 0;">
+                <div class="old-price">R1,697</div>
+                <div class="new-price">R697</div>
+                <div class="save-text">Save 59% &mdash; while stock lasts</div>
+            </div>
+            <a href="https://deals-sa.github.io/combo/" class="cta-button">Get the Combo Deal &rarr;</a>
+            <div class="urgency-strip">&#128293; 23 people are viewing this deal right now</div>
+            <p class="cta-note">Free delivery &bull; Trusted brands &bull; Pay on delivery available</p>
+        </div>
+    </article>
+
+    <footer class="footer">
+        &copy; 2026 &bull; Product reviews reflect personal opinions. Individual results may vary.
+    </footer>
+
+    <div class="sticky-bar" id="stickyBar">
+        <span class="sticky-text">Combo Deal: <span class="sticky-price">R697</span></span>
+        <a href="https://deals-sa.github.io/combo/" class="cta-button">Get It Now &rarr;</a>
     </div>
 
     <script>
-        const REDIRECT_URL = "https://deals-sa.github.io/combo/";
-        const DURATION = 3000;
-
-        const progress = document.getElementById("progress");
-        const timer = document.getElementById("timer");
-        const container = document.getElementById("container");
-        const start = Date.now();
-
-        function update() {
-            const elapsed = Date.now() - start;
-            const pct = Math.min((elapsed / DURATION) * 100, 100);
-            const remaining = Math.max(Math.ceil((DURATION - elapsed) / 1000), 0);
-
-            progress.style.width = pct + "%";
-            timer.textContent = remaining + "s";
-
-            if (elapsed >= DURATION) {
-                container.classList.add("fade-out");
-                setTimeout(function () {
-                    window.location.href = REDIRECT_URL;
-                }, 500);
-                return;
+        var sticky = document.getElementById('stickyBar');
+        var shown = false;
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 600 && !shown) {
+                sticky.classList.add('visible');
+                shown = true;
+            } else if (window.scrollY <= 600 && shown) {
+                sticky.classList.remove('visible');
+                shown = false;
             }
-
-            requestAnimationFrame(update);
-        }
-
-        requestAnimationFrame(update);
+        });
     </script>
 </body>
 </html>
