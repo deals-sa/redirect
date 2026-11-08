@@ -5,435 +5,525 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Bought This Kitchen Combo — Here's My Honest Review After 3 Months</title>
     <meta name="description" content="Real customer review of the 3-piece kitchen appliance combo deal featuring Defy Microwave, Russell Hobbs Air Fryer and Mellerware Kettle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: #f0f2f5;
+            font-family: 'Merriweather', Georgia, serif;
+            background: #fff;
             color: #1a1a1a;
-            line-height: 1.8;
+            line-height: 1.85;
+            -webkit-font-smoothing: antialiased;
         }
 
+        .logo-bar {
+            background: #fff;
+            padding: 14px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo-bar img { height: 36px; }
+
         .top-bar {
-            background: #1a8c37;
+            background: linear-gradient(90deg, #15803d, #16a34a);
             color: #fff;
             text-align: center;
-            padding: 8px 16px;
-            font-family: -apple-system, system-ui, sans-serif;
+            padding: 10px 16px;
+            font-family: 'Inter', sans-serif;
             font-size: 0.8rem;
-            letter-spacing: 0.05em;
+            font-weight: 600;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
         }
 
         .header {
-            max-width: 720px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 32px 20px 0;
+            padding: 36px 20px 0;
         }
 
         .breadcrumb {
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.8rem;
-            color: #888;
-            margin-bottom: 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            color: #9ca3af;
+            margin-bottom: 20px;
         }
 
-        .breadcrumb a {
-            color: #888;
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb a { color: #9ca3af; text-decoration: none; }
+        .breadcrumb a:hover { color: #16a34a; }
 
         .badge {
             display: inline-block;
-            background: #e3f2fd;
-            color: #1565c0;
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 12px;
+            background: #ecfdf5;
+            color: #15803d;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 5px 14px;
             border-radius: 20px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
         }
 
         .article-title {
-            font-size: clamp(1.6rem, 5vw, 2.4rem);
-            line-height: 1.25;
+            font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+            line-height: 1.3;
             font-weight: 700;
-            color: #111;
-            margin-bottom: 16px;
+            color: #111827;
+            margin-bottom: 20px;
         }
 
         .article-meta {
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.85rem;
-            color: #777;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            color: #6b7280;
             margin-bottom: 32px;
             display: flex;
             align-items: center;
             gap: 12px;
-            flex-wrap: wrap;
         }
 
         .author-avatar {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            background: #e0c8a8;
+            background: linear-gradient(135deg, #d4a574, #c2956a);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            color: #6d5232;
-            font-size: 1rem;
+            color: #fff;
+            font-size: 0.85rem;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .meta-text strong { color: #333; }
+        .meta-text strong { color: #374151; }
 
         .hero-image {
-            max-width: 720px;
-            margin: 0 auto 40px;
+            max-width: 700px;
+            margin: 0 auto 36px;
             padding: 0 20px;
         }
 
         .hero-image img {
             width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
 
         .hero-image figcaption {
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.8rem;
-            color: #999;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            color: #9ca3af;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .content {
-            max-width: 720px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         .content p {
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-            color: #2a2a2a;
+            font-size: 1.05rem;
+            margin-bottom: 22px;
+            color: #374151;
         }
 
         .content h2 {
-            font-size: 1.4rem;
-            margin: 40px 0 16px;
-            color: #111;
-        }
-
-        .highlight-box {
-            background: #fff;
-            border-left: 4px solid #1a8c37;
-            padding: 20px 24px;
-            margin: 32px 0;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-        }
-
-        .highlight-box p {
-            font-size: 1rem;
-            margin-bottom: 0;
-            color: #333;
-        }
-
-        .product-list {
-            list-style: none;
-            margin: 24px 0;
-        }
-
-        .product-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 1.05rem;
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-        }
-
-        .product-list li:last-child { border-bottom: none; }
-
-        .check {
-            color: #1a8c37;
-            font-weight: 700;
+            font-family: 'Inter', sans-serif;
             font-size: 1.2rem;
+            font-weight: 700;
+            margin: 36px 0 14px;
+            color: #111827;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content h2::before {
+            content: '';
+            width: 4px;
+            height: 22px;
+            background: #16a34a;
+            border-radius: 2px;
             flex-shrink: 0;
         }
 
-        .testimonials {
-            margin: 48px 0;
+        /* Quick verdict */
+        .quick-verdict {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            border: 1px solid #bbf7d0;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            color: #374151;
         }
+
+        .quick-verdict-price {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .quick-verdict .old-price {
+            text-decoration: line-through;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        .quick-verdict .new-price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #dc2626;
+        }
+
+        .quick-verdict .save-tag {
+            background: #dc2626;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 20px 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            font-size: 0.98rem;
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* Product list */
+        .product-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .product-list li {
+            padding: 14px 16px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            background: #fafafa;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+
+        .product-list li:hover { background: #f0fdf4; }
+
+        .check {
+            color: #16a34a;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Price banner */
+        .price-banner {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #fde68a;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 28px 0;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .price-banner .old-price {
+            text-decoration: line-through;
+            color: #9ca3af;
+            font-size: 0.95rem;
+        }
+
+        .price-banner .new-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #dc2626;
+            margin: 4px 0;
+        }
+
+        .price-banner .save-text {
+            font-size: 0.85rem;
+            color: #15803d;
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+        .testimonials { margin: 36px 0; }
 
         .testimonial {
             background: #fff;
-            border-radius: 12px;
-            padding: 28px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            border: 1px solid #f3f4f6;
+            border-radius: 16px;
+            padding: 24px 24px 20px;
+            margin-bottom: 14px;
             position: relative;
+            transition: box-shadow 0.2s, border-color 0.2s;
         }
 
-        .testimonial::before {
-            content: '\201C';
-            position: absolute;
-            top: 12px;
-            left: 20px;
-            font-size: 3rem;
-            color: #e0e0e0;
-            font-family: Georgia, serif;
-            line-height: 1;
+        .testimonial:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-color: #e5e7eb;
         }
 
-        .testimonial-text {
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 16px;
-            padding-left: 4px;
-            font-style: italic;
+        .testimonial-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-family: -apple-system, system-ui, sans-serif;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
         }
 
         .testimonial-avatar {
-            width: 44px;
-            height: 44px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: #fff;
         }
 
         .testimonial-name {
             font-weight: 600;
-            font-size: 0.9rem;
-            color: #222;
+            font-size: 0.85rem;
+            color: #111827;
         }
 
         .testimonial-location {
-            font-size: 0.8rem;
-            color: #999;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.7;
+            padding: 0;
         }
 
         .stars {
-            color: #f9a825;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
+            color: #f59e0b;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
 
-        .cta-section {
-            text-align: center;
-            margin: 48px 0;
-            padding: 40px 24px;
-            background: #fff;
-            border-radius: 16px;
-            border: 1px solid #dce0e5;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        }
-
-        .cta-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            color: #111;
-        }
-
-        .cta-subtitle {
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 24px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #1a8c37;
-            color: #fff;
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 16px 48px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(26,140,55,0.3);
-        }
-
-        .cta-button:hover {
-            background: #15722d;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(26,140,55,0.4);
-        }
-
-        .cta-note {
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.8rem;
-            color: #999;
-            margin-top: 16px;
-        }
-
+        /* Rating summary */
         .rating-summary {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 16px;
-            margin: 24px 0;
-            font-family: -apple-system, system-ui, sans-serif;
+            margin: 28px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 14px;
+            font-family: 'Inter', sans-serif;
         }
 
         .rating-big {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #222;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #111827;
         }
 
-        .rating-detail {
-            text-align: left;
-        }
-
+        .rating-detail { text-align: left; }
         .rating-detail .stars { margin-bottom: 2px; }
+        .rating-detail span { font-size: 0.8rem; color: #6b7280; }
 
-        .rating-detail span {
-            font-size: 0.85rem;
-            color: #777;
-        }
-
-        .footer {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 40px 20px 100px;
-            border-top: 1px solid #eee;
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.8rem;
-            color: #aaa;
+        /* CTA section */
+        .cta-section {
             text-align: center;
+            margin: 44px 0;
+            padding: 40px 24px 36px;
+            background: linear-gradient(180deg, #f0fdf4 0%, #fff 100%);
+            border-radius: 20px;
+            border: 1px solid #bbf7d0;
         }
 
+        .cta-section h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+            color: #111827;
+        }
+
+        .cta-section h2::before { display: none; }
+
+        .cta-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        /* CTA button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(180deg, #22c55e, #16a34a);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            padding: 16px 44px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(22,163,74,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(180deg, #16a34a, #15803d);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(22,163,74,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(22,163,74,0.3);
+        }
+
+        .cta-note {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            color: #9ca3af;
+            margin-top: 14px;
+        }
+
+        .urgency-strip {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin: 14px auto 0;
+            max-width: 320px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            color: #d97706;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Inline CTA */
         .inline-cta {
             text-align: center;
             margin: 32px 0;
         }
 
         .inline-cta .cta-button {
-            font-size: 1rem;
-            padding: 14px 40px;
+            font-size: 0.95rem;
+            padding: 14px 36px;
         }
 
         .inline-cta-hint {
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.8rem;
-            color: #888;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            color: #9ca3af;
             margin-top: 8px;
         }
 
-        .price-banner {
-            background: #fff3e0;
-            border: 1px solid #ffe0b2;
-            border-radius: 10px;
-            padding: 16px 20px;
-            margin: 28px 0;
-            text-align: center;
-            font-family: -apple-system, system-ui, sans-serif;
-        }
-
-        .price-banner .old-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1rem;
-        }
-
-        .price-banner .new-price {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #d84315;
-            margin: 4px 0;
-        }
-
-        .price-banner .save-text {
-            font-size: 0.85rem;
-            color: #2e7d32;
-            font-weight: 600;
-        }
-
+        /* Sticky bar */
         .sticky-bar {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             background: #fff;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid #e5e7eb;
             padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 16px;
             z-index: 100;
-            box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
             transform: translateY(100%);
-            transition: transform 0.3s ease;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .sticky-bar.visible { transform: translateY(0); }
 
         .sticky-bar .sticky-text {
-            font-family: -apple-system, system-ui, sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
-            color: #333;
+            color: #374151;
             font-weight: 600;
         }
 
         .sticky-bar .sticky-text .sticky-price {
-            color: #d84315;
+            color: #dc2626;
             font-weight: 800;
         }
 
         .sticky-bar .cta-button {
-            padding: 10px 28px;
-            font-size: 0.95rem;
-            white-space: nowrap;
+            padding: 10px 24px;
+            font-size: 0.88rem;
+            border-radius: 10px;
         }
 
-        .urgency-strip {
-            background: #fff8e1;
-            border-radius: 8px;
-            padding: 10px 16px;
-            margin: 16px 0 0;
-            font-family: -apple-system, system-ui, sans-serif;
-            font-size: 0.85rem;
-            color: #e65100;
+        /* Footer */
+        .footer {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 36px 20px 100px;
+            border-top: 1px solid #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            color: #d1d5db;
             text-align: center;
-            font-weight: 500;
         }
 
+        /* Mobile */
         @media (max-width: 600px) {
-            .content p { font-size: 1rem; }
-            .testimonial { padding: 20px; }
-            .cta-button { padding: 14px 36px; font-size: 1rem; }
+            .content p { font-size: 0.95rem; }
+            .testimonial { padding: 18px; }
+            .cta-button { padding: 14px 32px; font-size: 0.95rem; }
             .sticky-bar { gap: 10px; padding: 10px 14px; }
             .sticky-bar .sticky-text { font-size: 0.78rem; }
-            .sticky-bar .cta-button { padding: 10px 20px; font-size: 0.85rem; }
+            .sticky-bar .cta-button { padding: 10px 18px; font-size: 0.82rem; }
+            .article-title { font-size: 1.4rem; }
+            .quick-verdict { padding: 20px 16px; }
+            .price-banner { padding: 20px 16px; }
         }
     </style>
 </head>
 <body>
-    <div class="top-bar">Trusted Reviews &bull; Home &amp; Kitchen</div>
+    <div class="logo-bar">
+        <img src="takealot.png" alt="Takealot">
+    </div>
+    <div class="top-bar">&#9200; Today Only: This combo deal expires at midnight</div>
 
     <header class="header">
         <div class="breadcrumb">
@@ -456,6 +546,17 @@
     </figure>
 
     <article class="content">
+        <div class="quick-verdict">
+            <div class="stars" style="font-size: 1.1rem; margin-bottom: 6px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <strong>4.8/5</strong> &mdash; 147 verified reviews
+            <div class="quick-verdict-price">
+                <span class="old-price">R1,697</span>
+                <span class="new-price">R697</span>
+                <span class="save-tag">-59%</span>
+            </div>
+            <a href="https://deals-sa.github.io/kitchenreviewssa/" class="cta-button" style="margin-top: 14px; padding: 13px 36px; font-size: 0.92rem;">Get the Combo Deal &rarr;</a>
+        </div>
+
         <p>
             Look, I wasn't planning on buying all three at once. I only needed a new kettle because my old one finally gave up after years of loyal service. But when I saw this combo deal, I couldn't believe the price for all three branded appliances together.
         </p>
@@ -474,6 +575,7 @@
             <div class="old-price">Separately: R1,697</div>
             <div class="new-price">Combo Price: R697</div>
             <div class="save-text">You save R1,000 (59% off)</div>
+            <a href="https://deals-sa.github.io/kitchenreviewssa/" class="cta-button" style="margin-top: 16px; padding: 13px 36px; font-size: 0.92rem;">See the Deal &rarr;</a>
         </div>
 
         <h2>The Air Fryer Changed Everything</h2>
@@ -506,52 +608,58 @@
 
         <div class="testimonials">
             <div class="testimonial">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="testimonial-top">
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #6366f1, #818cf8);">NP</div>
+                        <div>
+                            <div class="testimonial-name">Nompilo P.</div>
+                            <div class="testimonial-location">Johannesburg, GP</div>
+                        </div>
+                    </div>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
                 <p class="testimonial-text">
                     Best purchase I've made this year. The air fryer alone is worth the combo price. My family loves the food I make in it now. Delivery was fast too &mdash; arrived in 3 days.
                 </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background: #5c6bc0;">NP</div>
-                    <div>
-                        <div class="testimonial-name">Nompilo P.</div>
-                        <div class="testimonial-location">Johannesburg, GP</div>
-                    </div>
-                </div>
             </div>
 
             <div class="testimonial">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="testimonial-top">
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #0d9488, #2dd4bf);">LK</div>
+                        <div>
+                            <div class="testimonial-name">Lerato K.</div>
+                            <div class="testimonial-location">Pretoria, GP</div>
+                        </div>
+                    </div>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
                 <p class="testimonial-text">
                     I bought one for myself and then another as a gift for my sister's new flat. Everything works perfectly. The kettle with the blue light is gorgeous &mdash; looks way more expensive than it is.
                 </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background: #26a69a;">LK</div>
-                    <div>
-                        <div class="testimonial-name">Lerato K.</div>
-                        <div class="testimonial-location">Pretoria, GP</div>
-                    </div>
-                </div>
             </div>
 
             <div class="testimonial">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <div class="testimonial-top">
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #dc2626, #f87171);">DV</div>
+                        <div>
+                            <div class="testimonial-name">David V.</div>
+                            <div class="testimonial-location">Cape Town, WC</div>
+                        </div>
+                    </div>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                </div>
                 <p class="testimonial-text">
                     Very happy with the combo. Only reason for 4 stars instead of 5 is the microwave manual was a bit hard to follow, but the appliance itself is great. Definitely worth the price.
                 </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background: #ef5350;">DV</div>
-                    <div>
-                        <div class="testimonial-name">David V.</div>
-                        <div class="testimonial-location">Cape Town, WC</div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <div class="rating-summary">
             <div class="rating-big">4.8</div>
             <div class="rating-detail">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="stars" style="font-size: 1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <span>Based on 147 reviews</span>
             </div>
         </div>
@@ -559,13 +667,13 @@
         <div class="cta-section">
             <h2>Ready to Upgrade Your Kitchen?</h2>
             <p class="cta-subtitle">Get all 3 branded appliances in one combo deal</p>
-            <div class="price-banner" style="border: none; background: transparent; padding: 8px 0;">
-                <div class="old-price">R1,697</div>
-                <div class="new-price">R697</div>
-                <div class="save-text">Save 59% &mdash; while stock lasts</div>
+            <div style="margin-bottom: 20px; font-family: 'Inter', sans-serif;">
+                <div class="old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.95rem;">R1,697</div>
+                <div class="new-price" style="font-size: 2rem; font-weight: 800; color: #dc2626;">R697</div>
+                <div style="font-size: 0.82rem; color: #15803d; font-weight: 600;">Save 59% &mdash; today only</div>
             </div>
-            <a href="https://deals-sa.github.io/kitchenreviewssa/" class="cta-button">Get the Combo Deal &rarr;</a>
-            <div class="urgency-strip">&#128293; 23 people are viewing this deal right now</div>
+            <a href="https://deals-sa.github.io/kitchenreviewssa/" class="cta-button" style="font-size: 1.1rem; padding: 18px 52px;">Get the Combo Deal &rarr;</a>
+            <div class="urgency-strip">This price is only valid for today</div>
             <p class="cta-note">Free delivery &bull; Trusted brands &bull; Pay on delivery available</p>
         </div>
     </article>
@@ -583,10 +691,10 @@
         var sticky = document.getElementById('stickyBar');
         var shown = false;
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 600 && !shown) {
+            if (window.scrollY > 300 && !shown) {
                 sticky.classList.add('visible');
                 shown = true;
-            } else if (window.scrollY <= 600 && shown) {
+            } else if (window.scrollY <= 300 && shown) {
                 sticky.classList.remove('visible');
                 shown = false;
             }
